@@ -1,0 +1,51 @@
+public class Student {
+    // Instance variables to store student data
+    String name;
+    int rollNumber;
+    double grade;
+
+    // Default Constructor
+    // This constructor has no parameters and is automatically called when
+    // you create a new Student object without providing any arguments.
+    public Student() {
+        System.out.println("--- Default constructor called ---");
+        this.name = "Unknown";
+        this.rollNumber = 0;
+        this.grade = 0.0;
+        System.out.println("Student created with default values.");
+        System.out.println("------------------------------------");
+    }
+
+    // Parameterized Constructor
+    // This constructor accepts arguments to initialize the object's instance variables.
+    public Student(String name, int rollNumber, double grade) {
+        System.out.println("--- Parameterized constructor called ---");
+        // Using 'this' keyword to differentiate between instance variables and
+        // method parameters.
+        this.name = name;
+        this.rollNumber = rollNumber;
+        this.grade = grade;
+        System.out.println("Student created with provided values.");
+        System.out.println("------------------------------------");
+    }
+
+    // Method to display student information
+    public void displayStudentInfo() {
+        System.out.println("Student Information:");
+        System.out.println("Name: " + name);
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Grade: " + grade);
+        System.out.println();
+    }
+
+    // Main method to demonstrate the constructors
+    public static void main(String[] args) {
+        // Example 1: Creating a Student object using the default constructor
+        Student student1 = new Student();
+        student1.displayStudentInfo(); // This will show the default values
+
+        // Example 2: Creating another Student object using the parameterized constructor
+        Student student2 = new Student("Alice", 101, 95.5);
+        student2.displayStudentInfo(); // This will show the custom values
+    }
+}
