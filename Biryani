@@ -1,0 +1,31 @@
+public class Biryani {
+
+    /**
+     * This method prepares Biryani using the specified ingredients.
+     *
+     * @param rice   The type of rice to be used (e.g., "Basmati").
+     * @param meat   The type of meat to be used (e.g., "Chicken", "Mutton").
+     * @param masala The type of masala to be used (e.g., "Hyderabadi", "Lucknowi").
+     * @return A string describing the delicious Biryani that was made.
+     */
+    public String makeBiryani(String rice, String meat, String masala) {
+        System.out.println("Starting the biryani preparation...");
+        System.out.println("Using " + rice + " rice for the perfect grain texture.");
+        System.out.println("Adding tender " + meat + " pieces.");
+        System.out.println("Mixing in a special blend of " + masala + " masala.");
+        
+        String result = "Your delicious " + meat + " Biryani is ready!";
+        return result;
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the Biryani class
+        Biryani myBiryani = new Biryani();
+        
+        // Call the makeBiryani method and store the output
+        String readyMessage = myBiryani.makeBiryani("Basmati", "Chicken", "Hyderabadi");
+        
+        // Print the final output
+        System.out.println(readyMessage);
+    }
+}
